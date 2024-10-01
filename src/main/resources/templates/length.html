@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Length Conversion</title>
+</head>
+<body>
+<h1>Length Conversion</h1>
+<form th:action="@{/length}" method="post">
+    <label for="value">Value:</label>
+    <input type="text" id="value" name="value">
+    <label for="from">From:</label>
+    <input type="text" id="from" name="from">
+    <label for="to">To:</label>
+    <input type="text" id="to" name="to">
+    <button type="submit">Convert</button>
+</form>
+
+<h2>Converted Value:</h2>
+<p th:text="${convertedValue}">Conversion result will appear here.</p>
+</body>
+</html>
